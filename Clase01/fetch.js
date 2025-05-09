@@ -7,3 +7,4 @@ async function loadUser(){
 
         container.innerHTML= users.map(users)
     }
+}
