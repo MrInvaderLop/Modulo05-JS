@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Cuenta Bancaria</title>
+    <script src="https://cdn.jsdelivr.net/npm/zod@3.22.4/lib/index.umd.min.js"></script>
+    <style>
+        body { font-family: Arial; max-width: 600px; margin: 30px auto; padding: 1em;}
+        label { display: block; margin-top: 10px; }
+        input, select { width: 100%; padding: 8px; margin-top: 5px; }
+        button { margin-top: 15px; padding: 10px; background: #007bff; color: white; border: none; cursor: pointer; }
+        .error { color: red; font-size: 0.9em; }
+    </style>
+</head>
+
+<body>
+
+<h2>Crear Cuenta Bancaria</h2>
+<form id="cuenta-form">
+    <label>Nombre
+    <input type="text" name="nombre" />
+    <div class="error" id="error-nombre"></div>
+    </label>
+
+    <label>RFC
+    <input type="text" name="rfc" />
+    <div class="error" id="error-rfc"></div>
+    </label>
+
+    <label>Monto inicial
+        <input type="number" name="monto" step="0.01" />
+        <div class="error" id="error-monto"></div>
+    </label>
+
+    <label>Correo
+        <input type="email" name="correo" />
+        <div class="error" id="error-correo"></div>
+    </label>
+
+    <label>Fecha de nacimiento
+        <input type="date" name="fechaNacimiento" />
+        <div class="error" id="error-fechaNacimiento"></div>
+    </label>
+
+    <label>Tipo de cuenta
+        <select name="tipoCuenta">
+            <option value="">Selecciona</option>
+            <option value="ahorro">Ahorro</option>
+            <option value="cheques">Cheques</option>
+            <option value="nómina">Nómina</option>
+        </select>
+        <div class="error" id="error-tipoCuenta"></div>
+    </label>
+
+    <button type="submit">Crear cuenta</button>
+</form>
