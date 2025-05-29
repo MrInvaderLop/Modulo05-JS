@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body{
+    background-color:#857C46;
+}
+
+::-webkit-scrollbar {
+    width: 12px; /* ancho de la barra */
+}
+
+::-webkit-scrollbar-track {
+    background: #686137; /* color del riel de fondo */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #B5C2BF; /* color del "pulgar" (parte movible) */
+    border-radius: 10px;
+    border: 2px solid #857C46; /* borde para dar efecto de separación */
+}
+
+.head{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+nav{
+    margin: 0;
+    display: flex ;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    padding-right: 16px;
+    background-color: #857C46;
+    box-shadow: 0px 2px 5px #c8c8c8;
+    
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+}
+
+nav div{
+    width: 70%;
+    display: flex;
+
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+nav p img{
+    width: 100%;
+    max-width: 240px;
+    padding: 10px;
+}
+
+nav div a{
+    display: flex;
+    width: 95%;
+    height: 100%;
+    background-color:#857C46 ;
+    justify-content: center;
+    align-items: center;
+    color: #B5C2BF;
+    text-decoration: none;
+    
+}
+
+nav div a:hover{
+    background-color: #B5C2BF ;
+    color: #201E1E;
+}
+
+.container{
+    margin: 4% 10% 4% 10%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container h1{
+    color: #B5C2BF;
+    padding: 0 0 1% 0;
+    font-size: 400%;
+}
+.container p{
+    color: #B5C2BF;
+    padding: 0 0 5% 0;
+    font-size: 200%;
+}
+
+button {
+    padding: 1% 10%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 150%;
+    font-weight: 700;
+    color: #434343;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    color: #434343;
+}
+
+
+@media screen and (max-width: 768px){
+    nav{
+        height: 15vh;
+    }
+
+    nav div a{
+        border: 1px solid #B5C2BF;
+    }
+
+    nav .logo{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 490px){
+    nav{
+        padding: 0 10px;
+    }
+
+@media screen and (max-width: 425px){
+    nav div{
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width: 375px){
+    nav{
+        font-size: 90%;
+    }
+    nav div{
+        width: 100vw;
+    }
+}

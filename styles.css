@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body{
+    background-color:#857C46;
+}
+
+::-webkit-scrollbar {
+    width: 12px; /* ancho de la barra */
+}
+
+::-webkit-scrollbar-track {
+    background: #686137; /* color del riel de fondo */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #B5C2BF; /* color del "pulgar" (parte movible) */
+    border-radius: 10px;
+    border: 2px solid #857C46; /* borde para dar efecto de separación */
+}
+
+.head{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+nav{
+    margin: 0;
+    display: flex ;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    padding-right: 16px;
+    background-color: #857C46;
+    box-shadow: 0px 2px 5px #c8c8c8;
+    
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+}
+
+nav div{
+    width: 70%;
+    display: flex;
+
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+nav p img{
+    width: 100%;
+    max-width: 240px;
+    padding: 10px;
+}
+
+nav div a{
+    display: flex;
+    width: 95%;
+    height: 100%;
+    background-color:#857C46 ;
+    justify-content: center;
+    align-items: center;
+    color: #B5C2BF;
+    text-decoration: none;
+    
+}
+
+nav div a:hover{
+    background-color: #B5C2BF ;
+    color: #201E1E;
+}
+
+.container .title{
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Ocupa toda la altura del viewport */
+
+    width: 100%;
+    padding: 5% 7% 10%;
+    border-bottom: solid; 
+    border-color: #c8c8c8;
+}
+
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: calc(5vw + 10vh);
+    font-weight: 500;
+    color: #B5C2BF;
+    letter-spacing: .1rem;
+}
+
+.author{
+    margin-top: 2%;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2em;
+    font-weight: 200;
+    color: #B5C2BF;
+    
+}
+
+.tarjetas{
+    padding: 5%;
+}
+
+.tarjeta{   
+    box-sizing: border-box;
+    max-width: 1400px;
+    max-height: 1076px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.tarjetas a{
+    text-decoration: none;
+    transition: transform 0.3s ;
+}
+
+.tarjetas a .tarjeta:hover{
+    transform: scale(1.05);
+}
+
+.tarjeta .right-side-tarjeta img{
+        height: auto;
+        max-width: 100%;
+        vertical-align: middle;
+        border-style: none;
+        padding: 2% 2%;
+}
+
+.tarjeta .left-side-tarjeta{
+    display: flex;
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 32px 16px;
+    color: white;
+    font-size: calc(1.0188rem + .2256vw);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    align-items: center;
+    justify-content: center;
+}
+
+.tarjeta .block{
+    max-width: 83%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.text-block .block h2{
+    line-height: 1.385;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.body-text{
+    margin-top: 24px;
+    margin-bottom: 30px;
+    line-height: 1.75;
+}
+
+.body-text p{
+    margin-bottom: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+.primera{
+    background-color: #8B979D;
+}
+
+.segunda{
+    background-color: #9A9195;
+}
+
+.tercera{
+    background-color:#1e3932;
+}
+
+.cuarta{
+    background-color: #ACB073;
+}
+
+@media screen and (max-width: 768px){
+    nav{
+        height: 15vh;
+    }
+
+    nav div a{
+        border: 1px solid #B5C2BF;
+    }
+
+    nav .logo{
+        display: none;
+    }
+
+    .tarjetas .tarjeta{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2);
+    }
+}
+
+@media screen and (max-width: 490px){
+    nav{
+        padding: 0 10px;
+    }
+    h1{
+        font-size: calc(5vw + 8.5vh);
+}
+
+@media screen and (max-width: 425px){
+    h1{
+        font-size: calc(5vw + 6.5vh);
+    }
+    
+    nav div{
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width: 375px){
+    nav{
+        font-size: 90%;
+    }
+    nav div{
+        width: 100vw;
+    }
+    .container .title{
+        padding-top: 15%;
+    }
+}
